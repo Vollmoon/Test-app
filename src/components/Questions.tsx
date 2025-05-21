@@ -16,8 +16,16 @@ const Question: React.FC<QuestionProps> = ({
   questionIndex,
   totalQuestions,
 }) => {
+  
   return (
-    <Box>
+    <Box
+      maxWidth="600px"
+      mx="auto"
+      p={3}
+      borderRadius={2}
+      boxShadow={3}
+      bgcolor="background.paper"
+    >
       <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
         <Typography variant="subtitle1" fontWeight="bold" color="red">
           Question {questionIndex + 1} of {totalQuestions}

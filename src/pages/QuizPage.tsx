@@ -109,14 +109,7 @@ const QuizPage: React.FC = () => {
             </Box>
 
             {currentQuestions.map((q, i) => (
-                <Box
-                    key={i}
-                    mb={4}
-                    p={3}
-                    boxShadow={3}
-                    borderRadius={2}
-                    bgcolor="background.paper"
-                >
+                <div key={i}>
                     <Question
                         questionText={q.question}
                         options={q.options}
@@ -124,8 +117,7 @@ const QuizPage: React.FC = () => {
                         questionIndex={pageIndex * questionsPerPage + i}
                         totalQuestions={quizQuestions.length}
                     />
-
-                </Box>
+                </div>
             ))}
 
             {/* Next Button */}
